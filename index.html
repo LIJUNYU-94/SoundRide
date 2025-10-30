@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="img/logo.png" alt="logo" />
+      </header>
+      <main>
+        <div class="riding">
+          <div class="riding_date">
+            <div class="date-picker">
+              <span id="dateText"></span>
+              <span class="chevron" aria-hidden="true"></span>
+              <input id="dateInput" type="date" lang="ja" />
+            </div>
+          </div>
+          <div class="riding_map">
+            <p class="riding_map-name">東京都青梅市奥多摩むかし道</p>
+            <!-- ↑ここで道路名受け取る -->
+            <img
+              src="img/bicycle.png"
+              alt="bicycle"
+              class="riding_map-bicycle"
+            />
+            <div class="riding_map-container">
+              <iframe src="" frameborder="0"></iframe>
+              <!-- ↑ここで地図を埋め込み -->
+            </div>
+          </div>
+        </div>
+        <div class="result">
+          <svg
+            class="result_bg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 393 947"
+            fill="none"
+          >
+            <path
+              d="M510 461.729C510 729.203 369.865 946.033 197 946.033C24.1349 946.033 -116 729.203 -116 461.729C-116 194.254 24.1349 0 197 0C369.865 0 510 194.254 510 461.729Z"
+              fill="white"
+            />
+          </svg>
+          <div class="result_container">
+            <section class="result_ingredients">
+              <p class="result_title">
+                集めた食材は <span class="result_count">6</span> 点です
+              </p>
+              <!-- ↑ここのresult_countで材料数を受け取る -->
+              <div class="result_icons">
+                <img src="img/icon.png" alt="食材1" />
+                <img src="img/icon.png" alt="食材2" />
+                <img src="img/icon.png" alt="食材3" />
+                <img src="img/icon.png" alt="食材3" />
+                <img src="img/icon.png" alt="食材3" />
+                <img src="img/icon.png" alt="食材3" />
+              </div>
+              <!-- ↑ここを空きにして、imgタグを追加することで材料の画像を受け取る -->
+            </section>
+
+            <!-- 料理画像・タイトル -->
+            <section class="result_dish">
+              <p class="result_route_text">
+                <span class="result_route_name">東京都青梅市奥多摩むかし道</span
+                >ルートのお料理
+              </p>
+              <!-- ↑ここのresult_route_nameのspanでルート名を受け取る-->
+
+              <img
+                src="img/dish.png"
+                alt="料理画像"
+                class="result_dish_image"
+              />
+
+              <p class="result_dish_name_kana">ひらがな</p>
+              <p class="result_dish_name">料理名</p>
+              <p class="result_dish_desc">
+                広島県の郷土料理で、鍋の土手のように味噌を塗って食べる「かきの土手鍋」が有名です。牡蠣の旨味と味噌の風味が合わさった温まる料理です。 
+              </p>
+            </section>
+            <!-- ↑ここで料理画像、名前、説明を受け取る-->
+
+            <!-- 材料 -->
+            <section class="result_ingredients_list">
+              <p class="result_subtitle">【材料】(4人前)</p>
+              <ul class="result_list">
+                <li><span>かき（むき身）</span><span>200g</span></li>
+                <li><span>白菜</span><span>7枚（正味700g）</span></li>
+                <li><span>にんじん</span><span>2/3本（正味100g）</span></li>
+                <li><span>長ねぎ</span><span>1本（正味100g）</span></li>
+                <li><span>にら</span><span>1束（正味100g）</span></li>
+                <li><span>しいたけ</span><span>4枚</span></li>
+                <li><span>水</span><span>4カップ</span></li>
+                <li>
+                  <span>丸鶏がらスープのもと</span><span>大さじ2・1/2</span>
+                </li>
+              </ul>
+            </section>
+            <!-- ↑ここを空きにして、liを追加することで材料を受け取る、名前と量を分けて入れよう-->
+
+            <!-- 作り方 -->
+            <section class="result_recipe">
+              <p class="result_subtitle">【作り方】</p>
+              <ol class="result_steps">
+                <li stepnum="①">
+                  かきはザルに入れて塩少々（分量外）をふって、
+                  ボウルに入れ、水を２～３回取り替えながら
+                  ふり洗いをし、水気をきる。
+                </li>
+                <li stepnum="②">
+                  白菜は芯と葉に分け、
+                  芯は４ｃｍ幅のそぎ切りにし、葉は４ｃｍ幅に切る。
+                  にんじんは大きめの短冊切りにし、
+                  ねぎは３ｍｍ幅の斜め切りにする。 にらは５ｃｍ長さに切り、
+                  しいたけは２等分のそぎ切りにする。
+                </li>
+                <li stepnum="③">
+                  鍋に水と鶏がらスープのもとを入れて火にかけ、煮立ったら、
+                  白菜の芯・にんじん・ねぎ・しいたけ・白菜の葉
+                  ・かきの順に加えて煮る。具材に火が通ったら、
+                  にらを加えてサッと煮る。
+                </li>
+                <li stepnum="④">完成</li>
+              </ol>
+            </section>
+            <!-- ↑ここを空きにして、liを追加することで作り方のstepを受け取る-->
+
+            <!-- ボタン -->
+            <div class="result_button_wrap">
+              <button class="result_button">自分に送る</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <small>@コピーライト</small>
+      </footer>
+    </div>
+  </body>
+</html>
