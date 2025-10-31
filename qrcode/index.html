@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="../img/logo.png" alt="logo" />
+      </header>
+      <main>
+        <p class="result_readme">
+          下記のQRコードをスマートフォンの<br />カメラで読み取ってください。<br />
+          読み取りが完了すると、レシピ情報を取得できます。
+        </p>
+        <div class="result">
+          <svg
+            class="result_bg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 393 300"
+            fill="none"
+          >
+            <path
+              d="M510 145.96C510 230.512 369.865 299.056 197 299.056C24.1349 299.056 -116 230.512 -116 145.96C-116 61.4069 24.1349 0 197 0C369.865 0 510 61.4069 510 145.96Z"
+              fill="white"
+            />
+          </svg>
+          <div class="result_container qrcode">
+            <p class="riding_map-name qrcode-name">
+              東京都青梅市奥多摩むかし道ルートのレシピ
+            </p>
+            <img src="../img/qrcode.svg" alt="qrcode" />
+            <!-- ここで名前と生成されたqrcodeを受け取る -->
+          </div>
+        </div>
+      </main>
+      <footer>
+        <small>@コピーライト</small>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -47,14 +47,13 @@ main {
   color: #111;
 }
 
-/* ▼マーク */
 .date-picker .chevron {
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 9px solid #274b6b;
   transform: translateY(1px);
+}
+
+/* カレンダー開いてるときは上向きに反転 */
+.date-picker .chevron.open {
+  transform: translateY(-1px) rotate(180deg);
 }
 
 /* 透明inputを重ねる */
@@ -128,8 +127,7 @@ main {
   z-index: 2;
 }
 .result section {
-  padding-bottom: 65px;
-  margin: 0 auto;
+  margin: 0 auto 65px;
 }
 .result_title {
   font-family: Inter;
@@ -193,7 +191,9 @@ main {
   text-align: left;
 }
 .result_ingredients_list {
-  width: 82%;
+  padding: 30px;
+  width: 90%;
+  background-color: #f3fafb;
 }
 .result_subtitle {
   color: #103863;
@@ -201,6 +201,7 @@ main {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.8px;
+  padding-bottom: 20px;
 }
 .result_list {
   font-size: 10px;
@@ -211,7 +212,7 @@ main {
   display: flex;
   justify-content: space-between; /* 左右に分ける */
   gap: 20px; /* 中央の余白 */
-  padding: 4px 0;
+  padding: 1px 0;
 }
 
 .result_list li span:first-child {
@@ -291,4 +292,23 @@ footer small {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.48px;
+}
+/* qrcodeページ */
+.result_readme {
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.48px;
+  padding: 92px 0 43px;
+}
+.qrcode {
+  text-align: center;
+  padding: 83px 0 112px;
+}
+.qrcode-name {
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 34px;
 }
